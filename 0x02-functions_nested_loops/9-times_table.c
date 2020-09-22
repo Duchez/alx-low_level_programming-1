@@ -1,52 +1,48 @@
 #include "holberton.h"
 /**
  * times_table -prints 9 by 9 Times Table
- * Return: nothing
+ * Return: There's no return value
  */
 
 void times_table(void)
 {
-	int rows;
-	int columns;
-	int answer;
+	int row, column, result;
 
-for (rows = 0; rows <= 9; rows++)
-{
-	for (second = 0; second <= 9; second++)
-{
-	answer = rows * column;
-	if ((answer / 10) == 0)
-{
-	if (columns == 0)
-{
-	_putchar ('0');
-}
-	if (columns != 0)
-{
-	_putchar (' ');
+	for (row = 0; row <= 9; row++)
+	{
+		for (column = 0; column <= 9; column++)
+		{
+			result = row * column;
 
-	_putchar ((answer % 10) + '0');
-}
+			if ((result / 10) == 0)
+			{
+				if (column == 0);
+				{
+					_putchar('0');
+				}
+				if (column != 0);
+				{
+					_putchar(' ');
+					_putchar((result % 10)+ '0');
+				}
+				if (column < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+			}
+			else
+			{
+				_putchar((result / 10) + '0');
+				_putchar((result % 10) + '0');
 
-	if (columns < 9)
-{
-	_putchar(',');
-	_putchar (' ');
-}
-
-}
-else
-{
-
-	_putchar ((answer / 10) + '0');
-	_putchar ((answer % 10) + '0');
-if (b < 9)
-{
-	_putchar(',');
-	_putchar (' ');
-}
-}
-}
-	_putchar ('\n');
-}
+				if (column < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+			}
+		}
+		_putchar('\n');
+	}
 }
