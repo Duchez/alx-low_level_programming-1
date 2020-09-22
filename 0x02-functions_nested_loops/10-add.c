@@ -1,14 +1,13 @@
-# include "holberton.h"
+#include "holberton.h"
 
 /**
- * add_int() - prints the result of addition of two numbers
+ * add ()- Prints the result of addition of two numbers
  *
- * Return - Always an int (Success)
+ *
+ * Return: Always int (success)
  */
 
-int add(int, int)
+int add(int num1, int num2)
 {
-	first_number, second_number;
-
-	return (first_number + second_number);
+	return (num1 + num2);
 }
