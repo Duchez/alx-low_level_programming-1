@@ -3,7 +3,6 @@
 /**
  * int _islower(int c); - Checks for lowercase characters
  *
- *@c: The int value to be printed.
  * Return: (1) if character is lower and (0) if not
  */
 
