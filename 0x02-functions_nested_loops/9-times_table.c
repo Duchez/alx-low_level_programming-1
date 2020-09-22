@@ -1,48 +1,52 @@
 #include "holberton.h"
 /**
- * times_table -prints tables
+ * times_table -prints 9 by 9 Times Table
  * Return: nothing
  */
+
 void times_table(void)
 {
-int a; /*Declaring statements*/
-int b;
-int c;
-for (a = 0; a <= 9; a++)/*First for*/
-{
-for (b = 0; b <= 9; b++) /*Secondo for*/
-{
-c = a * b; /* multiplication a*b*/
-if ((c / 10) == 0) /*If the first digit is 0*/
-{
-if (b == 0)
-{
-_putchar ('0');
-}
-if (b != 0)
-{
-_putchar (' ');
-_putchar ((c % 10) + '0');
-}
-if (b < 9) /*don't print the last (;)*/
-{
-_putchar(',');
-_putchar (' ');
-} /*End second IF*/
+	int rows;
+	int columns;
+	int answer;
 
-} /*End the first IF*/
+for (rows = 0; rows <= 9; rows++)
+{
+	for (second = 0; second <= 9; second++)
+{
+	answer = rows * column;
+	if ((answer / 10) == 0)
+{
+	if (columns == 0)
+{
+	_putchar ('0');
+}
+	if (columns != 0)
+{
+	_putchar (' ');
+
+	_putchar ((answer % 10) + '0');
+}
+
+	if (columns < 9)
+{
+	_putchar(',');
+	_putchar (' ');
+}
+
+}
 else
 {
 
-_putchar ((c / 10) + '0');
-_putchar ((c % 10) + '0');
-if (b < 9) /*don't print the last (;)*/
+	_putchar ((answer / 10) + '0');
+	_putchar ((answer % 10) + '0');
+if (b < 9)
 {
-_putchar(',');
-_putchar (' ');
+	_putchar(',');
+	_putchar (' ');
 }
-} /*End ELSE*/
-} /*End second FOR*/
-_putchar ('\n');
-} /*End first FOR*/
+}
+}
+	_putchar ('\n');
+}
 }
