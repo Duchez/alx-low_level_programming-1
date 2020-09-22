@@ -11,10 +11,10 @@ void times_table(void)
 	int columns;
 	int answer;
 
-	while (fields <= 9)
+	while (fields < 10)
 	{
 		colunms = 0;
-		while (columns <= 9)
+		while (columns < 10)
 		{
 			answer = (rows * column);
 			if (answer >= 10)
