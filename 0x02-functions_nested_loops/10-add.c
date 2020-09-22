@@ -6,7 +6,9 @@
  * Return - Always an int (Success)
  */
 
-int add(int first_number, int second_number)
+int add(int, int)
 {
-	return (first_number + second_number)
+	first_number, second_number;
+
+	return (first_number + second_number);
 }
