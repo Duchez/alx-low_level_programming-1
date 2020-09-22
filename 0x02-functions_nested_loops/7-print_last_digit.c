@@ -11,19 +11,18 @@ int print_last_digit(int r)
 {
 
 	int last_digit;
-	char converter = '0';
 
 
 if (r < 0)
 {
 	last_digit = (-1 *(r % 10));
-	_putchar(last_digit + converter);
+	_putchar(last_digit + '0');
 	return (last_digit);
 }
 else
 {
-	last_digit = r % 10;
-	_putchar(last_digit + converter);
+	last_digit = (r % 10);
+	_putchar(last_digit + '0');
 	return (last_digit);
 }
 
