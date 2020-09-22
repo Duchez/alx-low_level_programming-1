@@ -1,57 +1,48 @@
 #include "holberton.h"
-
 /**
- * times_table - Prints the 9 times table starting with 0.
- * The table's width is 9 by 9 (9x9)
+ * times_table -prints tables
+ * Return: nothing
  */
-
 void times_table(void)
 {
-	int rows = 0;
-	int columns, answer;
+int a; /*Declaring statements*/
+int b;
+int c;
+for (a = 0; a <= 9; a++)/*First for*/
+{
+for (b = 0; b <= 9; b++) /*Secondo for*/
+{
+c = a * b; /* multiplication a*b*/
+if ((c / 10) == 0) /*If the first digit is 0*/
+{
+if (b == 0)
+{
+_putchar ('0');
+}
+if (b != 0)
+{
+_putchar (' ');
+_putchar ((c % 10) + '0');
+}
+if (b < 9) /*don't print the last (;)*/
+{
+_putchar(',');
+_putchar (' ');
+} /*End second IF*/
 
-	char space = ' ';
-	char comma = ',';
+} /*End the first IF*/
+else
+{
 
-	while (rows < 10)
-	{
-		columns = 0;
-		while (columns < 10)
-		{
-			answer = (rows * columns);
-
-			if (answer >= 10)
-			{
-				_putchar((answer / 10) + '0');
-				_putchar((answer % 10) + '0');
-
-				if (columns != 9)
-				{
-					_putchar(comma);
-					_putchar(space);
-				}
-			}
-			else if (answer < 10);
-			{
-				_putchar((answer % 10) + '0');
-				
-				if (columns != 9 && (rows * (columns + 1)) > 9)
-				{
-					_putchar(comma);
-					_putchar(space);
-				}
-				else if (columns != 9 && (rows * (columns + 1)) < 10)
-				{
-					_putchar(comma);
-					_putchar(space);
-					_putchar(space);
-				}
-				
-			}
-			columns++;
-			
-		}
-		rows++;
-		_putchar('\n');
-	}
+_putchar ((c / 10) + '0');
+_putchar ((c % 10) + '0');
+if (b < 9) /*don't print the last (;)*/
+{
+_putchar(',');
+_putchar (' ');
+}
+} /*End ELSE*/
+} /*End second FOR*/
+_putchar ('\n');
+} /*End first FOR*/
 }
