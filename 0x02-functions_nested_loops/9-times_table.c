@@ -8,41 +8,48 @@
 void times_table(void)
 {
 	int rows = 0;
-	int columns;
-	int answer;
+	int columns, answer;
 
-	while (fields < 10)
+	char space = ' ';
+	char comma = ',';
+
+	while (rows < 10)
 	{
-		colunms = 0;
+		columns = 0;
 		while (columns < 10)
 		{
-			answer = (rows * column);
+			answer = (rows * columns);
+
 			if (answer >= 10)
 			{
 				_putchar((answer / 10) + '0');
 				_putchar((answer % 10) + '0');
+
 				if (columns != 9)
 				{
-					_putchar(',');
-					_putchar(' ');
+					_putchar(comma);
+					_putchar(space);
 				}
 			}
-			else if (answer < 10)
+			else if (answer < 10);
 			{
 				_putchar((answer % 10) + '0');
+				
 				if (columns != 9 && (rows * (columns + 1)) > 9)
 				{
-					_putchar(',');
-					_putchar(' ');
+					_putchar(comma);
+					_putchar(space);
 				}
 				else if (columns != 9 && (rows * (columns + 1)) < 10)
 				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
+					_putchar(comma);
+					_putchar(space);
+					_putchar(space);
 				}
+				
 			}
 			columns++;
+			
 		}
 		rows++;
 		_putchar('\n');
