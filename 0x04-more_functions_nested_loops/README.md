@@ -1,0 +1,1 @@
+This directory will be talking about functions and nested loops in a more advanced level that it predecessor, Functions and Nested Loops.
